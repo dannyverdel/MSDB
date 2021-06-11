@@ -1,21 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+// Navigation imports
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import { createBottomTabNavigator } from "react-navigation-tabs";
+
+// Screen imports
+import MoviesScreen from "./src/screens/MoviesScreen";
+import MoviesDetailScreen from "./src/screens/MoviesDetailScreen";
+import ShowsScreen from "./src/screens/ShowsScreen";
+import ShowsDetailScreen from "./src/screens/ShowsDetailScreen";
+
+// Icon imports
+import { MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
+
+const moviesFlow = createStackNavigator({
+  Movies: MoviesScreen,
+  MoviesDetail: MoviesDetailScreen
+});
+
+moviesFlow.navigationOptions = {
+  title: 'Movies',
+  tabBarIcon: <MaterialIcons name='local-movies' size={24} />,
+};
+
+const showsFlow = createStackNavigator({
+  Shows: ShowsScreen,
+  ShowsDetail: ShowsDetailScreen
+});
+
+showsFlow.navigationOptions = {
+  title: 'Shows',
+  tabBarIcon: <FontAwesome5 name='tv' size={24} />
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const tabNavigator = createBottomTabNavigator({
+  moviesFlow,
+  showsFlow
 });
+
+export default createAppContainer(tabNavigator);
