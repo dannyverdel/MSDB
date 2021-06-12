@@ -37,6 +37,9 @@ showsFlow.navigationOptions = {
 const tabNavigator = createBottomTabNavigator({
   moviesFlow,
   showsFlow
+},{
+  headerMode: 'screen',
+  cardStyle: { backgroundColor: 'red' }
 });
 
 export default createAppContainer(tabNavigator);
