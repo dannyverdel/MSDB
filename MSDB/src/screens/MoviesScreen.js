@@ -28,9 +28,11 @@ const MoviesScreen = ({ navigation }) => {
 
     useEffect(() => {
         getResults();
+        setTerm('');
 
         const listener = navigation.addListener("didFocus", () => {
             getResults();
+            setTerm('');
         });
 
         return () => {
