@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, FlatList, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, FlatList, Image, TouchableOpacity } from 'react-native';
 import api from '../api/api';
 import Secrets from '../../Secrets';
 import ListItemCast from '../components/ListItemCast';
@@ -96,7 +96,7 @@ const ShowsDetailScreen = ({ navigation }) => {
 };
 
 ShowsDetailScreen.navigationOptions = {
-    title: 'Detail'
+    title: 'Show Detail'
 };
 
 const styles = StyleSheet.create({
@@ -107,8 +107,8 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     image: {
-        height: 500,
-        width: 350,
+        height: 575,
+        width: 375,
         alignSelf: 'center',
         borderRadius: 10,
         borderColor: 'black',

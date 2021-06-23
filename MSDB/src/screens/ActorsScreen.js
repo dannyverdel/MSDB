@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import api from '../api/api';
 import Secrets from '../../Secrets';
-import ListItem from '../components/ListItem';
+import ListItemActors from '../components/ListItemActors';
 import Searchbar from '../components/SearchBar';
 
-const ShowsScreen = ({ navigation }) => {
+const ActorScreen = ({ navigation }) => {
     const [vault] = Secrets();
 
     const [results, setResults] = useState([]);
@@ -14,14 +14,15 @@ const ShowsScreen = ({ navigation }) => {
 
     const getResults = async () => {
         try {
-            const response = await api.get('/tv/popular', {
+            const response = await api.get('/person/popular', {
                 params: {
                     api_key: vault.apiKey
                 }
             });
             setResults(response.data.results);
+            setErrorMessage('');
         } catch (err) {
-            setErrorMessage(err.message);
+            setErrorMessage("Something went wrong, please try again later.");
         }
     };
 
@@ -41,7 +42,7 @@ const ShowsScreen = ({ navigation }) => {
 
     const searchApi = async (searchTerm) => {
         try {
-            const response = await api.get("/search/tv", {
+            const response = await api.get("/search/person", {
                 params: {
                     api_key: vault.apiKey,
                     query: searchTerm
@@ -70,11 +71,9 @@ const ShowsScreen = ({ navigation }) => {
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => {
                     return (
-                        <View>
-                            <TouchableOpacity onPress={() => navigation.navigate('ShowsDetail', { id: item.id })}>
-                                <ListItem result={item} type='Tv' />
-                            </TouchableOpacity>
-                        </View>
+                        <TouchableOpacity onPress={() => navigation.navigate('ActorsDetail', { id: item.id, movies: item.known_for })}>
+                            <ListItemActors result={item} />
+                        </TouchableOpacity>
                     );
                 }}
             />
@@ -83,14 +82,15 @@ const ShowsScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
     error: {
         textAlign: 'center',
         color: 'red',
-        marginTop: 10
-    },
-    container: {
-        flex: 1
+        marginTop: 10,
+        marginBottom: 10
     }
 });
 
-export default ShowsScreen;
+export default ActorScreen;
