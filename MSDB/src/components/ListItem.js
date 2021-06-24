@@ -16,35 +16,38 @@ const ListItem = ({ result, type }) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 10,
-        paddingBottom: 10,
-        marginRight: 15,
-        marginLeft: 15,
-        marginTop: 10
+        marginVertical: 10,
+        paddingVertical: 15,
+        marginHorizontal: 15,
+        backgroundColor: '#11497d',
+        borderRadius: 25
     },
     text: {
         fontSize: 30,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 10
+        marginBottom: 10,
+        color: 'white'
     },
     image: {
         height: 500,
         width: 350,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 3
     },
     subHeaderContainer: {
         width: 350,
         alignSelf: 'center',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        marginVertical: 5
     },
     subHeader: {
         fontSize: 20,
-        color: 'rgba(0, 0, 0, 0.6)'
+        color: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
     }
 });
 

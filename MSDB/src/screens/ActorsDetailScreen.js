@@ -39,7 +39,7 @@ const ActorsDetailScreen = ({ navigation }) => {
     }, []);
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             {errorMessage ? <Text style={styles.error}>Something went wrong, please try again later</Text> : null}
             <Image style={styles.image} source={{ uri: `https://image.tmdb.org/t/p/original/${results.profile_path}` }} />
             <View style={styles.row}>
@@ -71,6 +71,10 @@ ActorsDetailScreen.navigationOptions = {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#0d253f'
+    },
     error: {
         textAlign: 'center',
         color: 'red',
@@ -82,7 +86,7 @@ const styles = StyleSheet.create({
         width: 375,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 3,
         marginTop: 20
     },
@@ -92,12 +96,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 10,
         marginBottom: 10,
+        color: 'white'
     },
     biography: {
         fontSize: 18,
         width: 350,
         alignSelf: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white'
     },
     row: {
         flexDirection: 'row',
@@ -107,7 +113,8 @@ const styles = StyleSheet.create({
         marginVertical: 5
     },
     subHeader: {
-        color: 'rgba(0, 0, 0, 0.6)'
+        color: 'rgba(0, 0, 0, 0.6)',
+        color: 'white'
     },
     list: {
         marginVertical: 20
