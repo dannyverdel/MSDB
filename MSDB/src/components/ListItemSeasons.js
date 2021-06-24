@@ -20,18 +20,20 @@ const styles = StyleSheet.create({
         height: 350,
         width: 250,
         borderRadius: 10,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 3
     },
     name: {
         textAlign: 'center',
         marginVertical: 5,
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 20,
+        color: 'white'
     },
     episodes: {
         fontSize: 16,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white'
     }
 });
 

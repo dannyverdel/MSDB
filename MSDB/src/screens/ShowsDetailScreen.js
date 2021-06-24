@@ -54,7 +54,7 @@ const ShowsDetailScreen = ({ navigation }) => {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             {errorMessage ? <Text style={styles.error}>Something went wrong, please try again later</Text> : null}
             <Image style={styles.image} source={{ uri: `https://image.tmdb.org/t/p/original/${results.poster_path}` }} />
             <Text style={styles.title}>{results.name}</Text>
@@ -100,6 +100,10 @@ ShowsDetailScreen.navigationOptions = {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#0d253f'
+    },
     error: {
         textAlign: 'center',
         color: 'red',
@@ -111,7 +115,7 @@ const styles = StyleSheet.create({
         width: 375,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 3,
         marginTop: 20
     },
@@ -119,21 +123,23 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginTop: 10,
-        marginBottom: 10,
+        marginVertical: 10,
+        color: 'white'
     },
     overview: {
         fontSize: 18,
         width: 350,
         alignSelf: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white'
     },
     subHeader: {
         textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 18,
         marginVertical: 10,
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        color: 'white'
     },
     subHeaderContainer: {
         width: 350,
@@ -144,7 +150,8 @@ const styles = StyleSheet.create({
     },
     count: {
         fontSize: 20,
-        color: 'rgba(0, 0, 0, 0.6)'
+        color: 'white',
+        marginBottom: 10
     }
 });
 

@@ -12,25 +12,28 @@ const ListItemActors = ({ result }) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 10,
-        paddingBottom: 10,
-        marginRight: 15,
-        marginLeft: 15,
-        marginTop: 10
+        marginVertical: 10,
+        paddingVertical: 15,
+        marginHorizontal: 15,
+        backgroundColor: '#11497d',
+        borderRadius: 25
     },
     image: {
         height: 500,
         width: 350,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'black',
-        borderWidth: 3
+        borderColor: 'white',
+        borderWidth: 3,
+        marginVertical: 10
     },
     name: {
         fontSize: 30,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 10
+        marginBottom: 10,
+        color: 'white',
+        marginVertical: 10
     }
 });
 

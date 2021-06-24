@@ -53,21 +53,11 @@ const MoviesDetailScreen = ({ navigation }) => {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             {errorMessage ? <Text style={styles.error}>Something went wrong, please try again later</Text> : null}
             <Image style={styles.image} source={{ uri: `https://image.tmdb.org/t/p/original/${results.poster_path}` }} />
             <Text style={styles.title}>{results.title}</Text>
             <Text style={styles.overview}>{results.overview}</Text>
-            <ScrollView
-                style={styles.row}
-                horizontal
-                showsHorizontalScrollIndicator="false"
-            >
-                <Text style={styles.subHeader}>Released on {results.release_date}</Text>
-                <Text style={styles.subHeader}>Runtime: {(results.runtime / 60).toFixed(1)} hours</Text>
-                <Text style={styles.subHeader}>Revenue: ${results.revenue}</Text>
-                <Text style={styles.subHeader}>Budget: ${results.budget}</Text>
-            </ScrollView>
             <Text style={styles.title}>Cast</Text>
             <FlatList
                 data={credits}
@@ -91,6 +81,10 @@ MoviesDetailScreen.navigationOptions = {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#0d253f'
+    },
     error: {
         textAlign: 'center',
         color: 'red',
@@ -102,7 +96,7 @@ const styles = StyleSheet.create({
         width: 375,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 3,
         marginTop: 20
     },
@@ -112,12 +106,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 10,
         marginBottom: 10,
+        color: 'white'
     },
     overview: {
         fontSize: 18,
         width: 350,
         alignSelf: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white'
     },
     subHeader: {
         textAlign: 'center',
