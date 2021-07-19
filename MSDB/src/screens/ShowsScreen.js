@@ -89,8 +89,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     container: {
-        flex: 1,
-        backgroundColor: '#0d253f'
+        flex: 1
     }
 });
 

@@ -72,8 +72,7 @@ ActorsDetailScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#0d253f'
+        flex: 1
     },
     error: {
         textAlign: 'center',
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
         width: 375,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'white',
+        borderColor: 'black',
         borderWidth: 3,
         marginTop: 20
     },
@@ -96,14 +95,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 10,
         marginBottom: 10,
-        color: 'white'
+        color: 'black'
     },
     biography: {
         fontSize: 18,
         width: 350,
         alignSelf: 'center',
         textAlign: 'center',
-        color: 'white'
+        color: 'black'
     },
     row: {
         flexDirection: 'row',
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     },
     subHeader: {
         color: 'rgba(0, 0, 0, 0.6)',
-        color: 'white'
+        color: 'black'
     },
     list: {
         marginVertical: 20

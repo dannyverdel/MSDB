@@ -101,8 +101,7 @@ ShowsDetailScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#0d253f'
+        flex: 1
     },
     error: {
         textAlign: 'center',
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
         width: 375,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'white',
+        borderColor: 'black',
         borderWidth: 3,
         marginTop: 20
     },
@@ -124,14 +123,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginVertical: 10,
-        color: 'white'
+        color: 'black'
     },
     overview: {
         fontSize: 18,
         width: 350,
         alignSelf: 'center',
         textAlign: 'center',
-        color: 'white'
+        color: 'black'
     },
     subHeader: {
         textAlign: 'center',
@@ -139,7 +138,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginVertical: 10,
         marginHorizontal: 10,
-        color: 'white'
+        color: 'black'
     },
     subHeaderContainer: {
         width: 350,
@@ -150,7 +149,7 @@ const styles = StyleSheet.create({
     },
     count: {
         fontSize: 20,
-        color: 'white',
+        color: 'black',
         marginBottom: 10
     }
 });

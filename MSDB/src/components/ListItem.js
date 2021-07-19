@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         paddingVertical: 15,
         marginHorizontal: 15,
-        backgroundColor: '#11497d',
         borderRadius: 25
     },
     text: {
@@ -27,14 +26,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 10,
-        color: 'white'
+        color: 'black'
     },
     image: {
         height: 500,
         width: 350,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'white',
+        borderColor: 'black',
         borderWidth: 3
     },
     subHeaderContainer: {
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     subHeader: {
         fontSize: 20,
         color: 'rgba(0, 0, 0, 0.6)',
-        color: 'white'
+        color: 'black'
     }
 });
 

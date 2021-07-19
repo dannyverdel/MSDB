@@ -20,18 +20,18 @@ const styles = StyleSheet.create({
         height: 150,
         width: 130,
         borderRadius: 10,
-        borderColor: 'white',
+        borderColor: 'black',
         borderWidth: 3
     },
     name: {
         textAlign: 'center',
         marginVertical: 5,
         fontWeight: 'bold',
-        color: 'white'
+        color: 'black'
     },
     character: {
         textAlign: 'center',
-        color: 'white'
+        color: 'black'
     }
 });
 

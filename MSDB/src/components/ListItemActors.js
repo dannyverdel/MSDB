@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         paddingVertical: 15,
         marginHorizontal: 15,
-        backgroundColor: '#11497d',
         borderRadius: 25
     },
     image: {
@@ -23,7 +22,7 @@ const styles = StyleSheet.create({
         width: 350,
         alignSelf: 'center',
         borderRadius: 10,
-        borderColor: 'white',
+        borderColor: 'black',
         borderWidth: 3,
         marginVertical: 10
     },
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 10,
-        color: 'white',
+        color: 'black',
         marginVertical: 10
     }
 });

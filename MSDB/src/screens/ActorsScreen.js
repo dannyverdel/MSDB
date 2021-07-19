@@ -83,8 +83,7 @@ const ActorScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#0d253f'
+        flex: 1
     },
     error: {
         textAlign: 'center',

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         height: 350,
         width: 250,
         borderRadius: 10,
-        borderColor: 'white',
+        borderColor: 'black',
         borderWidth: 3
     },
     name: {
@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         fontWeight: 'bold',
         fontSize: 20,
-        color: 'white'
+        color: 'black'
     },
     episodes: {
         fontSize: 16,
         textAlign: 'center',
-        color: 'white'
+        color: 'black'
     }
 });
 

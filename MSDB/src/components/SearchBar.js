@@ -8,7 +8,7 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
             <Feather
                 name="search"
                 style={styles.iconStyle}
-                color='white'
+                color='black'
             />
             <TextInput
                 placeholder="Search"
@@ -18,8 +18,8 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
                 autoCapitalize="none"
                 autoCorrect={false}
                 onEndEditing={onTermSubmit}
-                placeholderTextColor='white'
-                color='white'
+                placeholderTextColor='black'
+                color='black'
             />
         </View>
     );
@@ -27,7 +27,6 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
 
 const styles = StyleSheet.create({
     backgroundStyle: {
-        backgroundColor: '#11497d',
         height: 50,
         borderRadius: 25,
         marginHorizontal: 15,
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         alignSelf: 'center',
         borderWidth: 1,
-        borderColor: 'white'
+        borderColor: 'black'
     },
     inputStyle: {
         fontSize: 18,
