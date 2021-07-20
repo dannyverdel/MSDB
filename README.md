@@ -14,3 +14,10 @@ The plan for MSDB is really simple: to create an app for letting users browse fo
 - Create a connection between the cast of a movie and the actor detail screen
 - Create a connection between the cast of a show and the actor detail screen
 - Create a connection between known movies of an actor and the movie detail screen
+
+## Build
+After cloning the repository you have to cd to the local repository. Here you can run `npm start`. You may be prompted to install npm or the expo CLI, both are required for this app to run. Localhost:19002 should automatically be started up, if not u can use [this](http://localhost:19002). After this you have two options:
+1. Choose to start up a simulator
+2. Run on physical device
+
+For both you are going to have to install the expo go app. 
